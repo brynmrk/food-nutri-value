@@ -55,8 +55,9 @@ class FoodSearch extends React.Component {
         <td>{food.food_grp_code}</td>
         <td>{food.ret_desc}</td>
         {food.jsonified_nutrients.map((nutrient, idx) => {
+          // eslint-disable-next-line
           return NUTRIENTS.map((nutrient_name, _idx) => {
-            if (nutrient.name == nutrient_name)
+            if (nutrient.name === nutrient_name)
               return (<th key={idx}>{nutrient.level}</th>)
           })
         })}
