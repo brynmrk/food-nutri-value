@@ -19,6 +19,7 @@ Bundler.require(*Rails.groups)
 
 module FoodNutriValue
   class Application < Rails::Application
+    require Rails.root.join('lib/properties.rb')
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 

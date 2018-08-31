@@ -11,9 +11,7 @@
   ['0255', '09', 'FRUITS(DRIED),STEWED'], ['0257', '09', 'FRUITS(DRIED),REHEATED'], ['0270', '09', 'FRUITS,CITRUS,CKD'], ['1251', '10','PORK,FRESH,BROILED'],
   ['1252', '10', 'PORK,FRESH,FRIED,W/O COATING'], ['1253', '10', 'PORK,FRESHFRIED,W/COATING']].each do |food_code_grp_code|
   food = Food.create(ret_code: food_code_grp_code[0], food_grp_code: food_code_grp_code[1], ret_desc: food_code_grp_code[2])
-  ['Calcium, Ca', 'Iron, Fe', 'Magnesium, Mg', 'Phosphorus, P', 'Potassium, K', 'Sodium, Na', 'Zinc, Zn', 'Copper, Cu', 'Vitamin C, total ascorbic acid', 'Thiamin',
-    'Riboflavin', 'Niacin', 'Vitamin B-6', 'Folate, food', 'Folic acid', 'Folate, total', 'Choline, total', 'Vitamin B-12', 'Vitamin A, UI', 'Vitamin A, RE',
-    'Alcohol, ethyl', 'Carotene, beta', 'Carotene, alpha', 'Cryptoxanthin, beta', 'Lycopene', 'Lutein + zeaxanthin'].each do |nutrient_name|
+  FoodNutrients::NUTRIENTS.each do |nutrient_name|
     Nutrient.create(name: nutrient_name, level: rand(100), food: food)
   end
 end
