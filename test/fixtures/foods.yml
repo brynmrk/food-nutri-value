@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ret_code: 1
+  food_grp_code: 1
+  ret_desc: MyText
+
+two:
+  ret_code: 1
+  food_grp_code: 1
+  ret_desc: MyText
